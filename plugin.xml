@@ -42,7 +42,7 @@
         <source-file src="android/src/main/java/com/marianhello/bgloc/data/sqlite/SQLiteLocationDAO.java" target-dir="src/com/marianhello/bgloc/data/sqlite" />
         <source-file src="android/src/main/java/com/marianhello/bgloc/data/sqlite/SQLiteConfigurationDAO.java" target-dir="src/com/marianhello/bgloc/data/sqlite" />
 
-        <dependency id="com.google.playservices" url="https://github.com/wf9a5m75/google-play-services" commit="master" />
+        <dependency id="com.google.playservices" url="https://github.com/gkachru/google-play-services" commit="master" />
         
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
