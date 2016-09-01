@@ -86,8 +86,8 @@
                 <param name="android-package" value="com.tenforwardconsulting.cordova.BackgroundGeolocationPlugin"/>
             </feature>
         </config-file>
-        <framework src="com.google.android.gms:play-services-location:+" />
-        <framework src="com.android.support:support-v4:+" />
+        <framework src="com.google.android.gms:play-services-location:+" custom="true" />
+        <framework src="com.android.support:support-v4:+" custom="true" />
     </platform>
 
     <platform name="ios">
