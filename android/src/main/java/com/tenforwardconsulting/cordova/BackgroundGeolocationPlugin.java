@@ -167,7 +167,8 @@ public class BackgroundGeolocationPlugin extends CordovaPlugin {
         }
     };
 
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) {
+    @Override
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         Activity activity = this.cordova.getActivity();
         Context context = activity.getApplicationContext();
 
@@ -269,10 +270,9 @@ public class BackgroundGeolocationPlugin extends CordovaPlugin {
 
 
     @Override
-    protected void pluginInitialize() {
+    public void initialize(CordovaInterface cordova, final CordovaWebView webView) {
         Log.d(TAG, "initializing plugin");
-        super.pluginInitialize();
-
+        super.initialize(cordova, webView);
         dao = DAOFactory.createLocationDAO(getContext());
     }
 
@@ -280,7 +280,7 @@ public class BackgroundGeolocationPlugin extends CordovaPlugin {
      * Override method in CordovaPlugin.
      * Checks to see if it should turn off
      */
-     @Override
+    @Override
     public void onDestroy() {
         Log.d(TAG, "destroying plugin");
         unregisterLocationModeChangeReceiver();
